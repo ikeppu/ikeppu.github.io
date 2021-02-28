@@ -148,7 +148,8 @@ body {
 .heading-secondary {
   font-size: 2.75rem;
   color: var(--color-grey-dark-3);
-  font-weight: 700; }
+  font-weight: 700;
+  font-style: italic; }
 
 .heading-tertiary {
   font-size: 2.5rem;
