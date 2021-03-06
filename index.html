@@ -7,17 +7,13 @@
     <!-- Шрифт подключён с google font -->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap"
       rel="stylesheet"
     />
 
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
-
     <!-- Подключение стилей -->
     <link rel="stylesheet" href="css/style.min.css" />
-
-    <title>ikeppu template</title>
+    <title>Document</title>
   </head>
   <body>
     <!-- NAVIGATION START -->
@@ -26,12 +22,11 @@
         <span class="navigation__icon">&nbsp;</span>
         <span class="navigation__icon-close hidden">&#x2715;</span>
       </span>
-
       <div class="navigation__background">&nbsp;</div>
       <nav class="navigation__nav">
         <ul class="navigation__list">
           <li class="navigation__item">
-            <a href="#about-me-cv" class="navigation__link"><span>1</span>About Me </a>
+            <a href="#cv-objective" class="navigation__link"><span>1</span>About Me </a>
           </li>
           <li class="navigation__item">
             <a href="#skills-cv" class="navigation__link"><span>2</span>My skills</a>
@@ -42,7 +37,7 @@
         </ul>
       </nav>
     </div>
-    <!-- NAVIGATION END -->
+    <!-- HEADER -->
     <header class="header">
       <div class="header__text-box">
         <h1 class="heading-primary">
@@ -51,55 +46,58 @@
         </h1>
       </div>
     </header>
+    <!-- MAIN CONTENT -->
     <main>
-      <section class="about-me" id="about-me-cv">
-        <div class="about-me__left">
-          <div class="about-me__left-heading">
+      <section class="cv__container" id="cv-objective">
+        <div class="cv__container-leftcard">
+          <div class="headingbox heading-js">
             <div>
               <hr class="line margin-top-small margin-bottom-very-small" />
-              <p class="heading-secondary">About Me</p>
+              <p class="card-heading">Objective</p>
             </div>
             <ion-icon name="id-card-outline"></ion-icon>
           </div>
-
-          <p class="about-me__paragpraph margin-top-very-small">
+          <p class="card-paragraph margin-top-very-small">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit quos itaque recusandae quae minima? Quasi
             eum minima quod! Assumenda maxime vitae ipsam placeat iure facere soluta aspernatur velit nam, nulla
             consequatur illo perspiciatis nemo unde et dolorum quisquam ut dolore saepe natus provident. Illo dolores
             tenetur ab enim repudiandae totam?
           </p>
-          <div class="about-me__left-heading">
+          <div class="headingbox heading-js">
             <div class="">
               <hr class="line margin-top-small margin-bottom-very-small" />
-              <p class="heading-secondary">Hobbies</p>
+              <p class="card-heading">Hobbies</p>
             </div>
-            <ion-icon name="american-football-outline" class="margin-top-small"></ion-icon>
+            <ion-icon name="american-football-outline" class=""></ion-icon>
           </div>
-
           <!-- NOT good practice -->
-          <div class="about-me__hobbies">
-            <small>Develop</small>
-            <span>&vert;</span>
-            <small>JavaScript </small>
-            <span>&vert;</span>
-            <small>Running </small>
-            <span>&vert;</span>
-            <small>Philosophy</small>
+          <div class="cv__container-leftcard-hobbies">
+            <ul class="cv__container-leftcard-hobbies-list">
+              <li class="cv__container-leftcard-hobbies-item"><span>Develop</span></li>
+              <li class="cv__container-leftcard-hobbies-item"><span>JavaScript</span></li>
+              <li class="cv__container-leftcard-hobbies-item"><span>Running</span></li>
+              <li class="cv__container-leftcard-hobbies-item"><span>Philosophy</span></li>
+            </ul>
           </div>
           <!-- NOT good practice -->
         </div>
-        <div class="about-me__right">
-          <img src="/img/photo-me-1-min.jpg" alt="My personal photo" />
+        <div class="cv__container-rightcard">
+          <img src="/img/photo-me-1-min.jpg" alt="My personal photo" class="cv__container-rightcard-img" />
           <hr class="line margin-top-small margin-bottom-very-small" />
-          <small>Name: Andrew Sahniks</small>
-          <small>Date of birth: 23-Dec-1988</small>
-          <small>Nationality: Latvian</small>
-          <div class="about-me__right-icons margin-top-very-small">
-            <div class="about-me__right-icons-box">
-              <a href="https://github.com/ikeppu" class="about-me__right-icons-box-link" target="_blank"
+          <ul class="cv__container-rightcard-list">
+            <li class="cv__container-rightcard-item">Name: Andrew Sahniks</li>
+            <li class="cv__container-rightcard-item">Date of birth: 23-Dec-1988</li>
+            <li class="cv__container-rightcard-item">Nationality: Latvian</li>
+          </ul>
+          <div class="cv__container-rightcard-icons margin-top-very-small">
+            <div class="cv__container-rightcard-icons-box">
+              <a href="https://github.com/ikeppu" class="cv__container-rightcard-icons-box-link" target="_blank"
                 ><ion-icon name="logo-github" class="ion-icon-small ion-icon-dark"></ion-icon
               ></a>
-              <a href="https://www.facebook.com/andrew.sahniks/" class="about-me__right-icons-box-link" target="_blank"
+              <a
+                href="https://www.facebook.com/andrew.sahniks/"
+                class="cv__container-rightcard-icons-box-link"
+                target="_blank"
                 ><ion-icon name="logo-facebook" class="ion-icon-small ion-icon-dark"></ion-icon
               ></a>
             </div>
@@ -107,127 +105,92 @@
           </div>
         </div>
       </section>
-      <section class="cv__section" id="skills-cv">
-        <div class="cv__section__1">
-          <div class="cv__section__1-heading">
-            <div class="">
+
+      <section class="cv__skills" id="skills-cv">
+        <div class="cv__skills-card cv__skills-card-1">
+          <div class="headingbox">
+            <div>
               <hr class="line margin-top-small margin-bottom-very-small" />
-              <p class="heading-secondary">Skills</p>
+              <p class="card-heading">Special skills</p>
             </div>
-            <ion-icon name="stats-chart-outline" class=""></ion-icon>
+            <ion-icon name="stats-chart-outline"></ion-icon>
           </div>
-          <div class="cv__section__1-skills margin-top-small">
-            <div class="cv__section__1-skills-box">
-              <small><b>HTML</b></small>
-              <small> - Good level 75%</small>
-            </div>
-            <div class="cv__section__1-skills-box margin-top-small">
-              <small><b>CSS/SASS</b></small>
-              <small> - Good level 75%</small>
-            </div>
-            <div class="cv__section__1-skills-box margin-top-small">
-              <small><b>JAVASCRIPT</b></small>
-              <small> - Good level 80%</small>
-            </div>
-            <div class="cv__section__1-skills-box margin-top-small">
-              <small><b>NODE</b></small>
-              <small> - Basic level 25%</small>
-            </div>
-            <div class="cv__section__1-skills-box margin-top-small">
-              <small><b>GIT</b></small>
-              <small> - Basic level 25%</small>
-            </div>
-          </div>
+          <ul class="cv__skills-card-list">
+            <li class="cv__skills-card-item"><span class="cv__skills-card-item-heading">html</span> - Good level</li>
+            <li class="cv__skills-card-item">
+              <span class="cv__skills-card-item-heading">css/sass</span> - Good level
+            </li>
+            <li class="cv__skills-card-item">
+              <span class="cv__skills-card-item-heading">javascript</span> - Good level
+            </li>
+            <li class="cv__skills-card-item"><span class="cv__skills-card-item-heading">node</span> - Basic level</li>
+            <li class="cv__skills-card-item"><span class="cv__skills-card-item-heading">git</span> - Basic level</li>
+          </ul>
         </div>
-        <div class="cv__section__2">
-          <div class="cv__section__2-heading">
-            <div class="">
+        <div class="cv__skills-card cv__skills-card-2">
+          <div class="headingbox">
+            <div>
               <hr class="line margin-top-small margin-bottom-very-small" />
-              <p class="heading-secondary">Language</p>
-            </div>
-            <ion-icon name="language-outline"></ion-icon>
-          </div>
-          <div class="cv__section__2-skills margin-top-small">
-            <div class="cv__section__2-skills-box">
-              <small><b>ENGLISH</b></small>
-              <small> - Good level 75%</small>
-            </div>
-            <div class="cv__section__2-skills-box">
-              <small><b>LATVIAN</b></small>
-              <small> - Average level 50%</small>
-            </div>
-            <div class="cv__section__2-skills-box">
-              <small><b>RUSSIAN</b></small>
-              <small> - Good level 90%</small>
-            </div>
-          </div>
-        </div>
-        <div class="cv__section__3">
-          <div class="cv__section__3-heading">
-            <div class="">
-              <hr class="line margin-top-small margin-bottom-very-small" />
-              <p class="heading-secondary">Education</p>
+              <p class="card-heading">Education</p>
             </div>
             <ion-icon name="school-outline"></ion-icon>
           </div>
-          <div class="cv__section__3-box">
-            <p>Eiropas tālmācibas vidusskola</p>
-            <span class="date"> - 2018-2019</span>
-            <span class="description"> - Vidējā izglītība</span>
+          <div class="cv__skills-card-2-wrapper">
+            <p class="heading">Eiropas tālmācibas vidusskola</p>
+            <span class="date"> - 2018 - 2019</span>
+            <span class="description"> - High school</span>
           </div>
-          <div class="cv__section__3-box">
-            <p>Rīgas Purvciema vidusskolā</p>
-            <span class="date"> - 2018-2019</span>
-            <span class="description"> - Vidējā izglītība</span>
+          <div class="cv__skills-card-2-wrapper">
+            <p class="heading">Rīgas Purvciema vidusskolā</p>
+            <span class="date"> - 2018 - 2019</span>
+            <span class="description"> - Intermediate schools</span>
           </div>
+        </div>
+        <div class="cv__skills-card cv__skills-card-3">
+          <div class="headingbox">
+            <div>
+              <hr class="line margin-top-small margin-bottom-very-small" />
+              <p class="card-heading">Language skills</p>
+            </div>
+            <ion-icon name="language-outline"></ion-icon>
+          </div>
+          <ul class="cv__skills-card-list cv__skills-card-3-list">
+            <li class="cv__skills-card-item"><span class="cv__skills-card-item-heading">English</span> - Average</li>
+            <li class="cv__skills-card-item"><span class="cv__skills-card-item-heading">Latvian</span> - Average</li>
+            <li class="cv__skills-card-item"><span class="cv__skills-card-item-heading">russian</span> - Native</li>
+          </ul>
         </div>
       </section>
-      <!-- <section class="resources">
-        <div class="resources-heading">
-          <p class="heading-tertiary">JAVASCRIPT RESOURCES</p>
-        </div>
-        <div class="resources-description">
-          <div class="resources-description-box">
-            <ion-icon name="logo-javascript" class="ion-icon-small resources-description-box-icon"></ion-icon>
-            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference" target="_blank"
-              >JavaScript Reference by MDN</a
-            >
-            <p class="resources-description-box-text">
-              Another reference by MDN, this one is for JavaScript. This is pretty advanced stuff.
-            </p>
-          </div>
-          <div class="resources-description-box">
-            <ion-icon name="logo-javascript" class="ion-icon-small resources-description-box-icon"></ion-icon>
-            <a href="http://youmightnotneedjquery.com/" target="_blank">DOM Manipulation Reference</a>
-            <p class="resources-description-box-text">
-              Called "You Might Not Need jQuery", but I use this as a complete DOM manipulation reference.
-            </p>
-          </div>
-          <div class="resources-description-box">
-            <ion-icon name="logo-javascript" class="ion-icon-small resources-description-box-icon"></ion-icon>
-            <a href="https://github.com/rwaldron/idiomatic.js" target="_blank">Principles of Writing Good JavaScript</a>
-            <p class="resources-description-box-text">
-              While I don't follow this 100%, it's good to have a style guide to write better code.
-            </p>
-          </div>
-        </div>
-      </section> -->
     </main>
     <!-- MODAL START -->
     <div class="modal__overlay hidden">
       <div class="modal__window">
         <div class="modal__titlebar">
-          <span class="modal__title"><h3 class="modal__title-heading">AAA</h3></span>
+          <span class="modal__title"><h3 class="modal__title-heading">Personal information</h3></span>
           <button class="modal__close">&times;</button>
         </div>
         <div class="modal__content">
-          <div class="modal__content-img"><</div>
-          <div class="modal__content-body"><p class="modal__content-body-paragraph">AAA</p></div>
+          <div class="modal__content-img">
+            <img src="/img/photo-me-1-min.jpg" alt="" />
+          </div>
+          <div class="modal__content-body">
+            <ul class="modal__content-body-list">
+              <li class="modal__content-body-item"><span>Name:</span> Andrew Sahniks</li>
+              <li class="modal__content-body-item"><span>Date of birth:</span> 23 december 1988</li>
+              <li class="modal__content-body-item">
+                <span>Email:</span>
+                <a href="mailto:andrejs.sahniks@gmail.com" target="_blank" class="modal__content-body-link"
+                  >andrejs.sahniks@gmail.com</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
     <!-- MODAL END -->
+
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <script src="javascsript/main.js"></script>
+    <script src="/javascript/main.js"></script>
   </body>
 </html>
