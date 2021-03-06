@@ -209,11 +209,18 @@ ion-icon {
     .modal__content {
       flex-direction: column; } }
   .modal__content-img {
+    display: flex;
     flex: 0 0 30%; }
+    @media only screen and (max-width: 37.5em) {
+      .modal__content-img {
+        justify-content: center;
+        align-items: center !important; } }
     .modal__content-img img {
       width: 100%;
-      height: 100%;
-      border: 1px solid red; }
+      height: 100%; }
+      @media only screen and (max-width: 37.5em) {
+        .modal__content-img img {
+          width: 60%; } }
       .modal__content-img img:hover {
         filter: opacity(50%); }
   .modal__content-body {
